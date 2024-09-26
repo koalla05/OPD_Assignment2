@@ -39,3 +39,12 @@ void Board::list() {
         figures[i] -> getInfo(i);
     }
 }
+
+void Board::save(std::string &path) {
+    grid -> save(path);
+}
+
+
+void Board::load(std::string &path) {
+    grid -> load(path);
+}

@@ -21,4 +21,8 @@ public:
     void clear();
 
     void list();
+
+    void save(std::string &path);
+
+    void load(std::string &path);
 };

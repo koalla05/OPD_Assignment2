@@ -1,5 +1,4 @@
 #include "Figure.h"
-
 #include <memory>
 
 void Triangle::draw(std::shared_ptr<Grid>& grid) {
@@ -60,5 +59,4 @@ void Triangle::remove(std::shared_ptr<Grid>& grid) {
 
 void Triangle::getInfo(int& id) {
    std::cout << id << " " <<  "triangle" << " " <<  x << " " << y << " " << height << std::endl;
-
 }
