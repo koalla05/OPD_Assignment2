@@ -3,4 +3,10 @@ project(OPD_Assignment2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(OPD_Assignment2 main.cpp)
+add_executable(OPD_Assignment2 main.cpp
+        Figure.h
+        Board.h
+        Grid.h
+        Board.cpp
+        Figure.cpp
+)
