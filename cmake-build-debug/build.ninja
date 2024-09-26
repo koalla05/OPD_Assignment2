@@ -61,8 +61,14 @@ build CMakeFiles/OPD_Assignment2.dir/Board.cpp.obj: CXX_COMPILER__OPD_Assignment
   OBJECT_DIR = CMakeFiles\OPD_Assignment2.dir
   OBJECT_FILE_DIR = CMakeFiles\OPD_Assignment2.dir
 
-build CMakeFiles/OPD_Assignment2.dir/Figure.cpp.obj: CXX_COMPILER__OPD_Assignment2_unscanned_Debug C$:/Users/kovko/CLionProjects/OPD_Assignment2/Figure.cpp || cmake_object_order_depends_target_OPD_Assignment2
-  DEP_FILE = CMakeFiles\OPD_Assignment2.dir\Figure.cpp.obj.d
+build CMakeFiles/OPD_Assignment2.dir/Triangle.cpp.obj: CXX_COMPILER__OPD_Assignment2_unscanned_Debug C$:/Users/kovko/CLionProjects/OPD_Assignment2/Triangle.cpp || cmake_object_order_depends_target_OPD_Assignment2
+  DEP_FILE = CMakeFiles\OPD_Assignment2.dir\Triangle.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OPD_Assignment2.dir
+  OBJECT_FILE_DIR = CMakeFiles\OPD_Assignment2.dir
+
+build CMakeFiles/OPD_Assignment2.dir/Line.cpp.obj: CXX_COMPILER__OPD_Assignment2_unscanned_Debug C$:/Users/kovko/CLionProjects/OPD_Assignment2/Line.cpp || cmake_object_order_depends_target_OPD_Assignment2
+  DEP_FILE = CMakeFiles\OPD_Assignment2.dir\Line.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OPD_Assignment2.dir
   OBJECT_FILE_DIR = CMakeFiles\OPD_Assignment2.dir
@@ -75,7 +81,7 @@ build CMakeFiles/OPD_Assignment2.dir/Figure.cpp.obj: CXX_COMPILER__OPD_Assignmen
 #############################################
 # Link the executable OPD_Assignment2.exe
 
-build OPD_Assignment2.exe: CXX_EXECUTABLE_LINKER__OPD_Assignment2_Debug CMakeFiles/OPD_Assignment2.dir/main.cpp.obj CMakeFiles/OPD_Assignment2.dir/Board.cpp.obj CMakeFiles/OPD_Assignment2.dir/Figure.cpp.obj
+build OPD_Assignment2.exe: CXX_EXECUTABLE_LINKER__OPD_Assignment2_Debug CMakeFiles/OPD_Assignment2.dir/main.cpp.obj CMakeFiles/OPD_Assignment2.dir/Board.cpp.obj CMakeFiles/OPD_Assignment2.dir/Triangle.cpp.obj CMakeFiles/OPD_Assignment2.dir/Line.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\OPD_Assignment2.dir

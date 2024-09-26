@@ -15,6 +15,7 @@ public:
     void print();
 
     void add(std::string& shape, int x, int y, int height);
+    void add(std::string& shape, int x0, int y0, int x1, int y1);
 
     void undo();
 

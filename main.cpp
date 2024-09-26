@@ -4,10 +4,13 @@
 
 int main() {
     Board board;
-    std::string shape = "triangle";
-    board.add(shape, 10, 1, 10);
-    board.add(shape, 25, 10, 3);
-    board.add(shape, 19, 5, 10);
+    std::string triangle = "triangle";
+    std::string line = "line";
+    board.add(triangle, 10, 1, 7);
+    board.add(line, 5, 10, 30, 80);
+    board.add(triangle, 25, 10, 3);
+    board.add(triangle, 19, 5, 10);
+    board.add(line, 0, 1, 9, 4);
     board.print();
     std::cout << "--------------------------------------------------" << std::endl;
 

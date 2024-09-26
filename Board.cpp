@@ -18,6 +18,14 @@ void Board::add(std::string& shape, int x, int y, int height) {
     }
 }
 
+void Board::add(std::string& shape, int x0, int y0, int x1, int y1) {
+    if (shape == "line") {
+        std::shared_ptr<Line> figure = std::make_shared<Line>(x0, y0, x1, y1);
+        figures.push_back(figure);
+        figure->draw(grid);
+    }
+}
+
 
 void Board::undo() {
     figures.back()->remove(grid);

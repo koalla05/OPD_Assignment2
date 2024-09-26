@@ -8,5 +8,6 @@ add_executable(OPD_Assignment2 main.cpp
         Board.h
         Grid.h
         Board.cpp
-        Figure.cpp
+        Triangle.cpp
+        Line.cpp
 )

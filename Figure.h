@@ -38,6 +38,13 @@ public:
 
 
 class Line: public Figure {
+    int x0;
+    int y0;
+    int x1;
+    int y1;
 public:
+    Line(int x, int y, int v, int w): x0(x), y0(y), x1(v), y1(w){}
     void draw(std::shared_ptr<Grid>& grid) override;
+    void remove(std::shared_ptr<Grid>& grid) override;
+    void getInfo(int& id) override;
 };
