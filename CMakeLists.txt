@@ -10,4 +10,5 @@ add_executable(OPD_Assignment2 main.cpp
         Board.cpp
         Triangle.cpp
         Line.cpp
+        Square.cpp
 )
