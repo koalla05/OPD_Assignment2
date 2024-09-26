@@ -13,6 +13,8 @@ int main() {
     board.undo();
     board.print();
 
+    board.list();
+
     board.clear();
     board.print();
     return 0;

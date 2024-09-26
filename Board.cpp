@@ -32,5 +32,10 @@ void Board::clear() {
         figures.back()->remove(grid);
         figures.pop_back();
     }
+}
 
+void Board::list() {
+    for (int i = 0 ; i < figures.size(); ++i) {
+        figures[i] -> getInfo(i);
+    }
 }

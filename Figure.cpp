@@ -55,6 +55,10 @@ void Triangle::remove(std::shared_ptr<Grid>& grid) {
       if (baseX >= 0 && baseX < grid->BOARD_WIDTH && baseY < grid->BOARD_HEIGHT) {
          grid->grid[baseY][baseX] = ' ';
       }
-
    }
+}
+
+void Triangle::getInfo(int& id) {
+   std::cout << id << " " <<  "triangle" << " " <<  x << " " << y << " " << height << std::endl;
+
 }
