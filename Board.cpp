@@ -17,3 +17,12 @@ void Board::add(std::string& shape, int x, int y, int height) {
         figure->draw(grid);
     }
 }
+
+
+void Board::undo() {
+    figures.back()->remove(grid);
+    figures.pop_back();
+    for (const auto& figure: figures) {
+        figure->draw(grid);
+    }
+}

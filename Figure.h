@@ -10,7 +10,7 @@ public:
     Figure(){}
     virtual ~Figure() {}
     virtual void draw(std::shared_ptr<Grid>& grid) = 0;
-    //virtual void remove(std::shared_ptr<Grid>& grid, int x, int y, int height) = 0;
+    virtual void remove(std::shared_ptr<Grid>& grid) = 0;
 };
 
 class Triangle: public Figure {
@@ -20,7 +20,7 @@ class Triangle: public Figure {
 public:
     Triangle(int x, int y, int height): x(x), y(y), height(height){}
     void draw(std::shared_ptr<Grid>& grid) override;
-    //void remove(std::shared_ptr<Grid>& grid, int x, int y, int height) override;
+    void remove(std::shared_ptr<Grid>& grid) override;
 };
 
 class Circle: public Figure {
