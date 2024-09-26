@@ -21,6 +21,11 @@ void Board::add(std::string& shape, int x, int y, int height) {
         figures.push_back(figure);
         figure->draw(grid, '*');
     }
+    else if (shape == "circle") {
+        std::shared_ptr<Circle> figure = std::make_shared<Circle>(x, y, height);
+        figures.push_back(figure);
+        figure->draw(grid, '*');
+    }
 }
 
 void Board::add(std::string& shape, int x0, int y0, int x1, int y1) {

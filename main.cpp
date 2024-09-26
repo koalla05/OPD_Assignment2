@@ -7,6 +7,8 @@ int main() {
     std::string triangle = "triangle";
     std::string line = "line";
     std::string square = "square";
+    std::string circle = "circle";
+    board.add(circle, 10, 10, 5);
     board.add(square, 0, 0, 5);
     board.add(triangle, 10, 1, 7);
     board.add(line, 5, 10, 30, 80);
