@@ -11,6 +11,7 @@ int main() {
     board.add(circle, 10, 10, 5);
     board.add(square, 0, 0, 5);
     board.add(triangle, 10, 1, 7);
+    board.add(triangle, 10, 1, 7);
     board.add(line, 5, 10, 30, 80);
     board.add(triangle, 25, 10, 3);
     board.add(square, 15, 15, 30);

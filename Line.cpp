@@ -22,3 +22,11 @@ void Line::draw(std::shared_ptr<Grid>& grid, const char& symbol) {
 void Line::getInfo(int& id) {
     std::cout << id << " line " << x0 << " " << y0 << " " << x1 << " " << y1 << std::endl;
 }
+
+bool Line::isSameFigure(std::shared_ptr<Figure> &other) {
+    Line* ptr = dynamic_cast<Line*>(other.get());
+    if (ptr != nullptr) {
+        return x0 == ptr->x0 && y0 == ptr->y0 && x1 == ptr->x1 && y1 == ptr->y1;
+    }
+    return false;
+}

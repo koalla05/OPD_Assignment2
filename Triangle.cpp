@@ -32,3 +32,12 @@ void Triangle::draw(std::shared_ptr<Grid>& grid, const char& symbol) {
 void Triangle::getInfo(int& id) {
    std::cout << id << " " <<  "triangle" << " " <<  x << " " << y << " " << height << std::endl;
 }
+
+bool Triangle::isSameFigure(std::shared_ptr<Figure> &other) {
+   Triangle* ptr = dynamic_cast<Triangle*>(other.get());
+   if (ptr != nullptr) {
+      return x == ptr->x && y == ptr->y && height == ptr->height;
+   }
+   return false;
+}
+

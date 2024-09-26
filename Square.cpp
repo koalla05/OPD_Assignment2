@@ -34,4 +34,12 @@ void Square::getInfo(int &id) {
     std::cout << id << " " <<  "square" << " " <<  x << " " << y << " " << height << std::endl;
 }
 
+bool Square::isSameFigure(std::shared_ptr<Figure> &other) {
+    Square* ptr = dynamic_cast<Square*>(other.get());
+    if (ptr != nullptr) {
+        return x == ptr->x && y == ptr->y && height == ptr->height;
+    }
+    return false;
+}
+
 

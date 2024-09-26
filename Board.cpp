@@ -11,10 +11,18 @@ void Board::print() {
 }
 
 void Board::add(std::string& shape, int x, int y, int height) {
+    bool isSame = false;
     if (shape == "triangle") {
-        std::shared_ptr<Triangle> figure = std::make_shared<Triangle>(x, y, height);
-        figures.push_back(figure);
-        figure->draw(grid, '*');
+        std::shared_ptr<Figure> figure = std::make_shared<Triangle>(x, y, height);
+        for (auto& element: figures) {
+            if (element->isSameFigure(figure)) {
+                isSame = true;
+            }
+        }
+        if (!isSame) {
+            figures.push_back(figure);
+            figure->draw(grid, '*');
+        }
     }
     else if (shape == "square") {
         std::shared_ptr<Square> figure = std::make_shared<Square>(x, y, height);

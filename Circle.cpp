@@ -22,3 +22,11 @@ void Circle::draw(std::shared_ptr<Grid> &grid, const char &symbol) {
 void Circle::getInfo(int &id) {
     std::cout << id << " " <<  "circle" << " " <<  x << " " << y << " " << height << std::endl;
 }
+
+bool Circle::isSameFigure(std::shared_ptr<Figure> &other) {
+    Circle* ptr = dynamic_cast<Circle*>(other.get());
+    if (ptr != nullptr) {
+        return x == ptr->x && y == ptr->y && height == ptr->height;
+    }
+    return false;
+}
