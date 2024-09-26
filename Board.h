@@ -16,9 +16,9 @@ public:
 
     void add(std::string& shape, int x, int y, int height);
 
-    void remove();
-
     void undo();
+
+    void clear();
 
     void list();
 };

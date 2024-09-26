@@ -26,3 +26,11 @@ void Board::undo() {
         figure->draw(grid);
     }
 }
+
+void Board::clear() {
+    while (!figures.empty()) {
+        figures.back()->remove(grid);
+        figures.pop_back();
+    }
+
+}
