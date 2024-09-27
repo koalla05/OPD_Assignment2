@@ -6,7 +6,7 @@ void Circle::draw(std::shared_ptr<Grid> &grid, const char &symbol) {
     for (int i = -height; i <= height; i++) {
         for (int j = -height; j <= height; j++) {
 
-            if (std::abs(sqrt(pow(j, 2) + pow(i, 2)) - height) < 0.5) {
+            if (std::abs(sqrt(pow(j, 2) + pow(i, 2)) - height) < 0.3) {
 
                 int gridX = x + j;
                 int gridY = y + i;
