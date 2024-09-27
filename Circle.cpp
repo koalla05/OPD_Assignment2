@@ -19,8 +19,8 @@ void Circle::draw(std::shared_ptr<Grid> &grid, const char &symbol) {
     }
 }
 
-void Circle::getInfo(int &id) {
-    std::cout << id << " " <<  "circle" << " " <<  x << " " << y << " " << height << std::endl;
+std::string Circle::getInfo(int &id) {
+    return std::to_string(id) + " circle " + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(height);
 }
 
 bool Circle::isSameFigure(std::shared_ptr<Figure> &other) {

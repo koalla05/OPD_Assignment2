@@ -1,5 +1,8 @@
 #include "Board.h"
 #include "Figure.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
 void Board::print() {
     for (const auto& row : grid->grid) {
@@ -23,6 +26,9 @@ void Board::add(std::string& shape, int x, int y, int height) {
             figures.push_back(figure);
             figure->draw(grid, '*');
         }
+        else {
+            std::cout << "Such a figure already exists" << std::endl;
+        }
     }
     else if (shape == "square") {
         std::shared_ptr<Figure> figure = std::make_shared<Square>(x, y, height);
@@ -34,6 +40,9 @@ void Board::add(std::string& shape, int x, int y, int height) {
         if (!isSame) {
             figures.push_back(figure);
             figure->draw(grid, '*');
+        }
+        else {
+            std::cout << "Such a figure already exists" << std::endl;
         }
     }
     else if (shape == "circle") {
@@ -47,6 +56,12 @@ void Board::add(std::string& shape, int x, int y, int height) {
             figures.push_back(figure);
             figure->draw(grid, '*');
         }
+        else {
+            std::cout << "Such a figure already exists" << std::endl;
+        }
+    }
+    else {
+        std::cout << "Something is wrong with parameters" << std::endl;
     }
 }
 
@@ -63,6 +78,12 @@ void Board::add(std::string& shape, int x0, int y0, int x1, int y1) {
             figures.push_back(figure);
             figure->draw(grid, '*');
         }
+        else {
+            std::cout << "Such a figure already exists" << std::endl;
+        }
+    }
+    else {
+        std::cout << "Something is wrong with parameters" << std::endl;
     }
 }
 
@@ -84,15 +105,50 @@ void Board::clear() {
 
 void Board::list() {
     for (int i = 0 ; i < figures.size(); ++i) {
-        figures[i] -> getInfo(i);
+        std::cout << figures[i] -> getInfo(i) << std::endl;
     }
 }
 
 void Board::save(std::string &path) {
-    grid -> save(path);
+    std::ofstream outFile(path);
+    if (!outFile.is_open()) {
+        std::cout << "Error" << std::endl;
+        return;
+    }
+
+    for (int i = 0; i < figures.size(); ++i) {
+        outFile << figures[i]->getInfo(i) << std::endl;
+    }
+
+    outFile.close();
 }
 
 
 void Board::load(std::string &path) {
-    grid -> load(path);
+    std::ifstream inFile(path);
+    std::string line;
+
+    if (!inFile.is_open()) {
+        std::cerr << "Error " << std::endl;
+    }
+
+    while (std::getline(inFile, line)) {
+        std::istringstream iss(line);
+        std::cout << line << std::endl;
+        int id, arg1, arg2, arg3, arg4;
+        std::string shape;
+
+        if (!(iss >> id >> shape >> arg1 >> arg2 >> arg3)) {
+            std::cout << "Error" << std::endl;
+            continue;
+        }
+        if (iss >> arg4) {
+                add(shape, arg1, arg2, arg3, arg4);
+        }
+        else {
+            add(shape, arg1, arg2, arg3);
+        }
+    }
+
+    inFile.close();
 }

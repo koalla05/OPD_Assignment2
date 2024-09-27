@@ -30,8 +30,8 @@ void Square::draw(std::shared_ptr<Grid> &grid, const char& symbol) {
     }
 }
 
-void Square::getInfo(int &id) {
-    std::cout << id << " " <<  "square" << " " <<  x << " " << y << " " << height << std::endl;
+std::string Square::getInfo(int &id) {
+    return std::to_string(id) + " square " + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(height);
 }
 
 bool Square::isSameFigure(std::shared_ptr<Figure> &other) {

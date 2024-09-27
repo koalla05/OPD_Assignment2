@@ -19,8 +19,8 @@ void Line::draw(std::shared_ptr<Grid>& grid, const char& symbol) {
     }
 }
 
-void Line::getInfo(int& id) {
-    std::cout << id << " line " << x0 << " " << y0 << " " << x1 << " " << y1 << std::endl;
+std::string Line::getInfo(int& id) {
+    return std::to_string(id) + " square " + std::to_string(x0) + " " + std::to_string(y0) + " " + std::to_string(x1) + " " + std::to_string(y1);
 }
 
 bool Line::isSameFigure(std::shared_ptr<Figure> &other) {

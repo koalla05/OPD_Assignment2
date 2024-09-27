@@ -9,7 +9,7 @@ class Figure {
 public:
     virtual ~Figure() = default;
     virtual void draw(std::shared_ptr<Grid>& grid, const char& symbol) = 0;
-    virtual void getInfo(int& id) = 0;
+    virtual std::string getInfo(int& id) = 0;
     virtual bool isSameFigure(std::shared_ptr<Figure>& other) = 0;
 };
 
@@ -20,7 +20,7 @@ public:
     int height;
     Triangle(int x, int y, int height): x(x), y(y), height(height){}
     void draw(std::shared_ptr<Grid>& grid, const char& symbol) override;
-    void getInfo(int& id) override;
+    std::string getInfo(int& id) override;
     bool isSameFigure(std::shared_ptr<Figure>& other) override;
 };
 
@@ -31,7 +31,7 @@ public:
     int height;
     Circle(int x, int y, int height): x(x), y(y), height(height){}
     void draw(std::shared_ptr<Grid>& grid, const char& symbol) override;
-    void getInfo(int& id) override;
+    std::string getInfo(int& id) override;
     bool isSameFigure(std::shared_ptr<Figure>& other) override;
 };
 
@@ -43,7 +43,7 @@ public:
     int height;
     Square(int x, int y, int height): x(x), y(y), height(height){}
     void draw(std::shared_ptr<Grid>& grid, const char& symbol) override;
-    void getInfo(int& id) override;
+    std::string getInfo(int& id) override;
     bool isSameFigure(std::shared_ptr<Figure>& other) override;
 };
 
@@ -56,6 +56,6 @@ public:
     int y1;
     Line(int x, int y, int v, int w): x0(x), y0(y), x1(v), y1(w){}
     void draw(std::shared_ptr<Grid>& grid, const char& symbol) override;
-    void getInfo(int& id) override;
+    std::string getInfo(int& id) override;
     bool isSameFigure(std::shared_ptr<Figure>& other) override;
 };

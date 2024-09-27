@@ -29,8 +29,8 @@ void Triangle::draw(std::shared_ptr<Grid>& grid, const char& symbol) {
    }
 }
 
-void Triangle::getInfo(int& id) {
-   std::cout << id << " " <<  "triangle" << " " <<  x << " " << y << " " << height << std::endl;
+std::string Triangle::getInfo(int& id) {
+   return std::to_string(id) + " square " + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(height);
 }
 
 bool Triangle::isSameFigure(std::shared_ptr<Figure> &other) {
