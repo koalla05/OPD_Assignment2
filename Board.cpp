@@ -152,3 +152,8 @@ void Board::load(std::string &path) {
 
     inFile.close();
 }
+
+
+void Board::shapes() {
+    std::cout << "triangle x, y, height" << std::endl << "circle x, y, radius" << std::endl << "square x, y, height" << std::endl << "line x0, y0, x1, y1" << std::endl;
+}

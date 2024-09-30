@@ -14,6 +14,9 @@ void proccessCommand(std::string& input, std::shared_ptr<Board> board) {
     else if (command == "list"){
         board -> list();
     }
+    else if (command == "shapes") {
+        board -> shapes();
+    }
     else if (command == "undo") {
         board -> undo();
     }

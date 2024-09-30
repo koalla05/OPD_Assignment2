@@ -26,4 +26,6 @@ public:
     void save(std::string &path);
 
     void load(std::string &path);
+
+    void shapes();
 };
