@@ -92,7 +92,7 @@ int main() {
     // std::cout << "--------------------------------------------------" << std::endl;
 
     while (true) {
-        std::cout << "Please enter what you want to do: " << std::endl;
+        std::cout << "Please, enter what you want to do: " << std::endl;
         std::getline(std::cin, input);
 
         if (input == "exit") {

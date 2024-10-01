@@ -89,6 +89,10 @@ void Board::add(std::string& shape, int x0, int y0, int x1, int y1) {
 
 
 void Board::undo() {
+    if (figures.empty()) {
+        std::cout << "Sorry, no figures yet" << std::endl;
+        return;
+    }
     figures.back()->draw(grid, ' ');
     figures.pop_back();
     for (const auto& figure: figures) {
@@ -104,6 +108,10 @@ void Board::clear() {
 }
 
 void Board::list() {
+    if (figures.empty()) {
+        std::cout << "Sorry, no figures yet" << std::endl;
+        return;
+    }
     for (int i = 0 ; i < figures.size(); ++i) {
         std::cout << figures[i] -> getInfo(i) << std::endl;
     }

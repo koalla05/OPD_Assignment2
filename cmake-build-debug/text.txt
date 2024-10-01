@@ -1,2 +1,2 @@
 0 circle 10 10 5
-1 square 2 2 9
+1 square 2 2
