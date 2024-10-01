@@ -28,8 +28,8 @@ class Circle: public Figure {
 public:
     int x;
     int y;
-    int height;
-    Circle(int x, int y, int height): x(x), y(y), height(height){}
+    int radius;
+    Circle(int x, int y, int height): x(x), y(y), radius(height){}
     void draw(std::shared_ptr<Grid>& grid, const char& symbol) override;
     std::string getInfo(int& id) override;
     bool isSameFigure(std::shared_ptr<Figure>& other) override;
