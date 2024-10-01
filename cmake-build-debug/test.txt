@@ -1,0 +1,8 @@
+0 circle 10 10 1
+1 square 0 0 5
+2 square 10 1 7
+3 square 5 10 30 80
+4 square 25 10 3
+5 square 15 15 30
+6 square 19 5 10
+7 square 0 1 9 4

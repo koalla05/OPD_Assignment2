@@ -142,7 +142,6 @@ void Board::load(std::string &path) {
 
     while (std::getline(inFile, line)) {
         std::istringstream iss(line);
-        std::cout << line << std::endl;
         int id, arg1, arg2, arg3, arg4;
         std::string shape;
 
